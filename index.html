@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sportiva — Equipamentos desportivos para superar os teus limites</title>
+<meta name="description" content="Loja online de equipamentos e acessórios desportivos: futebol, fitness, boxe, corrida, basquetebol e ténis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo"><span class="logo-mark">S</span>Sportiva</a>
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a href="index.html" class="active">Início</a>
+      <a href="products.html">Produtos</a>
+      <a href="products.html#categorias">Categorias</a>
+      <a href="products.html?sort=price-asc">Ofertas</a>
+      <a href="index.html#sobre">Sobre nós</a>
+      <a href="https://david868224.github.io/David/" target="_blank">Voltar ao Portfolio</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" data-search-toggle aria-label="Pesquisar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="icon-btn" data-user-toggle aria-label="Conta de utilizador">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <a href="cart.html" class="icon-btn" aria-label="Carrinho de compras">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+        <span class="cart-count">0</span>
+      </a>
+      <button class="hamburger" data-hamburger aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="search-flyout">
+  <div class="container">
+    <input type="search" placeholder="Pesquisar produtos… (ex: chuteiras, halteres)" aria-label="Pesquisar produtos">
+  </div>
+</div>
+
+<nav class="mobile-menu" aria-label="Menu móvel">
+  <a href="index.html">Início</a>
+  <a href="products.html">Produtos</a>
+  <a href="products.html#categorias">Categorias</a>
+  <a href="products.html?sort=price-asc">Ofertas</a>
+  <a href="index.html#sobre">Sobre nós</a>
+  <a href="cart.html">Carrinho</a>
+  <a href="c:\Users\David\Downloads\portfolio-david-carvalho.html">Voltar ao Portfolio</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-copy">
+      <span class="eyebrow">🏆 Nova coleção 2026</span>
+      <h1>Supere os <span class="accent">seus limites.</span></h1>
+      <p>Equipamentos desportivos para treinar melhor, correr mais longe e alcançar os seus objetivos.</p>
+      <div class="hero-actions">
+        <a href="products.html" class="btn btn-primary">Comprar agora</a>
+        <a href="products.html#categorias" class="btn btn-outline">Explorar produtos</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>20+</strong><span>Produtos disponíveis</span></div>
+        <div><strong>6</strong><span>Categorias desportivas</span></div>
+        <div><strong>4.6★</strong><span>Avaliação média</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <span class="hero-emoji">🏋️</span>
+      <div class="floating-card fc-1"><span class="fc-icon">⚡</span> Entrega em 48h</div>
+      <div class="floating-card fc-2"><span class="fc-icon">✅</span> Qualidade garantida</div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIAS -->
+<section class="section" id="categorias">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Categorias</span>
+        <h2>Encontra o teu desporto</h2>
+      </div>
+      <a href="products.html" class="link-more">Ver todas as categorias →</a>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card" data-category-link="futebol"><div class="cat-emoji">⚽</div><span>Futebol</span></div>
+      <div class="cat-card" data-category-link="fitness"><div class="cat-emoji">🏋️</div><span>Fitness</span></div>
+      <div class="cat-card" data-category-link="boxe"><div class="cat-emoji">🥊</div><span>Boxe</span></div>
+      <div class="cat-card" data-category-link="corrida"><div class="cat-emoji">🏃</div><span>Corrida</span></div>
+      <div class="cat-card" data-category-link="basquetebol"><div class="cat-emoji">🏀</div><span>Basquetebol</span></div>
+      <div class="cat-card" data-category-link="tenis"><div class="cat-emoji">🎾</div><span>Ténis</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTOS EM DESTAQUE -->
+<section class="section" style="background:var(--bg-soft);">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Destaques</span>
+        <h2>Produtos em destaque</h2>
+        <p>Uma seleção dos equipamentos mais procurados pelos nossos atletas.</p>
+      </div>
+      <a href="products.html" class="link-more">Ver catálogo completo →</a>
+    </div>
+    <div class="product-grid" id="featured-products"></div>
+  </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Porquê a Sportiva</span>
+        <h2>Benefícios de comprar connosco</h2>
+      </div>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">🚚</div>
+        <h3>Entrega rápida</h3>
+        <p>Entregamos em Luanda e outras províncias em 2 a 5 dias úteis.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🛡️</div>
+        <h3>Qualidade garantida</h3>
+        <p>Produtos selecionados e testados para um desempenho de confiança.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">💳</div>
+        <h3>Pagamento flexível</h3>
+        <p>Multicaixa Express, transferência bancária ou pagamento na entrega.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">↩️</div>
+        <h3>Trocas facilitadas</h3>
+        <p>Suporte dedicado para trocas e devoluções dentro do prazo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIS VENDIDOS -->
+<section class="section" style="background:var(--bg-soft);">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Populares</span>
+        <h2>Mais vendidos</h2>
+      </div>
+      <a href="products.html" class="link-more">Ver todos →</a>
+    </div>
+    <div class="product-grid" id="bestseller-products"></div>
+  </div>
+</section>
+
+<!-- BANNER PROMOCIONAL -->
+<section class="section" id="sobre">
+  <div class="container">
+    <div class="promo-banner">
+      <div>
+        <h2>Até 30% de desconto em fitness</h2>
+        <p>Equipa o teu treino em casa com halteres, tapetes e kits de treino funcional em promoção por tempo limitado.</p>
+      </div>
+      <a href="products.html?category=fitness" class="btn btn-primary">Ver ofertas de fitness</a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="newsletter">
+      <h2>Fica a par das novidades</h2>
+      <p>Subscreve a newsletter e recebe ofertas exclusivas em primeira mão.</p>
+      <form class="newsletter-form" id="newsletter-form">
+        <input type="email" placeholder="O teu e-mail" required aria-label="E-mail para newsletter">
+        <button type="submit" class="btn btn-primary">Subscrever</button>
+      </form>
+      <p class="form-msg"></p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-mark">S</span>Sportiva</a>
+        <p>Equipamentos para quem leva o treino a sério.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="WhatsApp">💬</a>
+          <a href="#" aria-label="TikTok">🎵</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="products.html">Produtos</a></li>
+          <li><a href="products.html#categorias">Categorias</a></li>
+          <li><a href="products.html?sort=price-asc">Ofertas</a></li>
+          <li><a href="index.html#sobre">Sobre nós</a></li>
+          <li><a href="https://david868224.github.io/David/" target="_blank">Voltar ao Portfolio</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Atendimento</h4>
+        <ul>
+          <li>📞 +244 923 000 000</li>
+          <li>✉️ apoio@sportiva.co.ao</li>
+          <li>🕘 Seg–Sáb, 9h–19h</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contactos</h4>
+        <ul>
+          <li>Talatona, Luanda, Angola</li>
+          <li><a href="#">Ajuda &amp; FAQ</a></li>
+          <li><a href="#">Política de trocas</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Sportiva. Todos os direitos reservados.</span>
+      <span>Projeto de portfólio Front-End</span>
+    </div>
+  </div>
+</footer>
+
+<script src="products.js"></script>
+<script src="cart.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

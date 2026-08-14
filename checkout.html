@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Sportiva</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo"><span class="logo-mark">S</span>Sportiva</a>
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="products.html">Produtos</a>
+      <a href="products.html#categorias">Categorias</a>
+      <a href="products.html?sort=price-asc">Ofertas</a>
+      <a href="index.html#sobre">Sobre nós</a>
+      <a href="https://david868224.github.io/David/" target="_blank">Voltar ao Portfolio</a>
+    <div class="nav-actions">
+      <a href="cart.html" class="icon-btn" aria-label="Carrinho de compras">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+        <span class="cart-count">0</span>
+      </a>
+      <button class="hamburger" data-hamburger aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-menu" aria-label="Menu móvel">
+  <a href="index.html">Início</a>
+  <a href="products.html">Produtos</a>
+  <a href="cart.html">Carrinho</a>
+  <a href="https://david868224.github.io/David/" target="_blank">Voltar ao Portfolio</a>
+
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="index.html">Início</a><span class="sep">/</span>
+    <a href="cart.html">Carrinho</a><span class="sep">/</span>
+    <span class="current">Checkout</span>
+  </div>
+</div>
+
+<div class="container" id="checkout-stepper">
+  <div class="checkout-progress">
+    <div class="progress-step active"><div class="dot">1</div><span class="label">Carrinho</span><div class="line"></div></div>
+    <div class="progress-step"><div class="dot">2</div><span class="label">Dados</span><div class="line"></div></div>
+    <div class="progress-step"><div class="dot">3</div><span class="label">Pagamento</span><div class="line"></div></div>
+    <div class="progress-step"><div class="dot">4</div><span class="label">Confirmação</span></div>
+  </div>
+
+  <div class="checkout-layout">
+    <div>
+      <!-- STEP 1: CARRINHO -->
+      <div class="checkout-step" id="checkout-step-1">
+        <div class="checkout-panel">
+          <h2>Resumo do carrinho</h2>
+          <div id="checkout-cart-summary"></div>
+          <div class="checkout-nav">
+            <a href="cart.html" class="btn btn-outline">← Voltar ao carrinho</a>
+            <button class="btn btn-primary" id="to-step-2">Continuar para pagamento</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2: DADOS DO CLIENTE -->
+      <div class="checkout-step" id="checkout-step-2" style="display:none;">
+        <div class="checkout-panel">
+          <h2>Dados do cliente</h2>
+          <form id="customer-form" novalidate>
+            <div class="form-grid">
+              <div class="form-field full">
+                <label for="cf-name">Nome completo</label>
+                <input type="text" id="cf-name" placeholder="Ex: Ana Maria dos Santos">
+                <span class="field-error" id="cf-name-error"></span>
+              </div>
+              <div class="form-field">
+                <label for="cf-phone">Número de telefone</label>
+                <input type="tel" id="cf-phone" placeholder="Ex: 923 000 000">
+                <span class="field-error" id="cf-phone-error"></span>
+              </div>
+              <div class="form-field">
+                <label for="cf-email">E-mail</label>
+                <input type="email" id="cf-email" placeholder="Ex: ana@email.com">
+                <span class="field-error" id="cf-email-error"></span>
+              </div>
+              <div class="form-field">
+                <label for="cf-province">Província</label>
+                <select id="cf-province">
+                  <option value="">Selecionar…</option>
+                  <option>Luanda</option>
+                  <option>Benguela</option>
+                  <option>Huíla</option>
+                  <option>Huambo</option>
+                  <option>Cabinda</option>
+                  <option>Bié</option>
+                  <option>Malanje</option>
+                  <option>Namibe</option>
+                  <option>Uíge</option>
+                  <option>Outra</option>
+                </select>
+                <span class="field-error" id="cf-province-error"></span>
+              </div>
+              <div class="form-field">
+                <label for="cf-municipality">Município</label>
+                <input type="text" id="cf-municipality" placeholder="Ex: Talatona">
+                <span class="field-error" id="cf-municipality-error"></span>
+              </div>
+              <div class="form-field full">
+                <label for="cf-address">Endereço de entrega</label>
+                <input type="text" id="cf-address" placeholder="Rua, número, bairro, referência">
+                <span class="field-error" id="cf-address-error"></span>
+              </div>
+            </div>
+            <div class="checkout-nav">
+              <button type="button" class="btn btn-outline" id="back-to-1">← Voltar</button>
+              <button type="submit" class="btn btn-primary">Continuar para pagamento</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- STEP 3: PAGAMENTO -->
+      <div class="checkout-step" id="checkout-step-3" style="display:none;">
+        <div class="checkout-panel">
+          <h2>Método de pagamento</h2>
+          <div class="payment-options">
+            <label class="payment-opt" data-payment="multicaixa">
+              <input type="radio" name="payment">
+              <span class="p-icon">💳</span>
+              <span><span class="p-name">Multicaixa Express</span><br><span class="p-desc">Pagamento instantâneo via referência</span></span>
+            </label>
+            <label class="payment-opt" data-payment="transferencia">
+              <input type="radio" name="payment">
+              <span class="p-icon">🏦</span>
+              <span><span class="p-name">Transferência bancária</span><br><span class="p-desc">Confirmação em até 24h úteis</span></span>
+            </label>
+            <label class="payment-opt" data-payment="entrega">
+              <input type="radio" name="payment">
+              <span class="p-icon">📦</span>
+              <span><span class="p-name">Pagamento na entrega</span><br><span class="p-desc">Paga em dinheiro ao receber</span></span>
+            </label>
+          </div>
+          <p style="font-size:12.5px;color:var(--text-secondary);margin-top:16px;">Este é um checkout de demonstração — nenhum pagamento real é processado.</p>
+          <div class="checkout-nav">
+            <button type="button" class="btn btn-outline" id="back-to-2">← Voltar</button>
+            <button type="button" class="btn btn-primary" id="to-confirm" disabled>Finalizar pedido</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="summary-card">
+      <h3>Resumo</h3>
+      <div class="summary-row"><span>Subtotal</span><span class="co-subtotal">0 Kz</span></div>
+      <div class="summary-row"><span>Entrega</span><span class="co-shipping">0 Kz</span></div>
+      <div class="summary-row total"><span>Total</span><span class="co-total">0 Kz</span></div>
+      <div id="review-summary" style="margin-top:16px;"></div>
+    </aside>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <span>© 2026 Sportiva. Todos os direitos reservados.</span>
+      <span>Projeto de portfólio Front-End</span>
+    </div>
+  </div>
+</footer>
+
+<script src="products.js"></script>
+<script src="cart.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
